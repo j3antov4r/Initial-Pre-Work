@@ -1,0 +1,23 @@
+<style>
+  /*
+  learned: when you absolutely need to be sure that an element has a specific CSS,
+  and it never will be overrided use: !important  
+
+  coded by: Jean Tovar
+  */
+  body {
+    background-color: black;
+    font-family: monospace;
+    color: green;
+  }
+  #orange-text {
+    color: orange;
+  }
+  .pink-text {
+    color: pink !important;
+  }
+  .blue-text {
+    color: blue;
+  }
+</style>
+<h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>

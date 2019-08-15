@@ -1,0 +1,19 @@
+<style>
+  /*
+  learned: when you need to be sure that your CCS style has Compatibility with 
+  browser fallbacks, go ahead an adding another property declaration right before
+  the existing declaration
+
+  coded by: Jean Tovar
+  */
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+</style>
+<div class="red-box"></div>
