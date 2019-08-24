@@ -8,11 +8,11 @@ Basically the process is as follows:
 
 1. The browser, through the underlying network interface, submits a request to the ISP DNS Server requesting access to https://www.techtonic.com/.
 2. The ISP DNS Server searches for the site https://www.techtonic.com/ in its cache:
-   - if it obtains the IP address of the domain in the cache, it sends the IP address to the browser
-   - If the domain is not in the cache:
-     - The ISP's DNS server queries another DNS Server (Root DNS Server).
-     - Once the DNS Server of the ISP receives the domain address, it saves it in its cache for future requests
-     - and, finally it sends the corresponding IP address to the browser.
+  - if it obtains the IP address of the domain in the cache, it sends the IP address to the browser
+  - If the domain is not in the cache:
+    - The ISP's DNS server queries another DNS Server (Root DNS Server).
+    - Once the DNS Server of the ISP receives the domain address, it saves it in its cache for future requests
+    - and, finally it sends the corresponding IP address to the browser.
 3. The browser now connects directly to the server https://www.techtonic.com/ to request any resource or service.
 
 
