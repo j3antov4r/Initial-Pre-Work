@@ -10,15 +10,23 @@ Basically the process is as follows:
 2. The ISP DNS Server searches for the site https://www.techtonic.com/ in its cache:
   - if it obtains the IP address of the domain in the cache, it sends the IP address to the browser
   - If the domain is not in the cache:
-    - The ISP's DNS server queries another DNS Server (Root DNS Server).
-    - Once the DNS Server of the ISP receives the domain address, it saves it in its cache for future requests
+    - The ISP's DNS server queries another DNS Servers (Root DNS Server).
+    - Once the IPS's DNS Server receives the domain address, it saves it in its cache for future requests
     - and, finally it sends the corresponding IP address to the browser.
 3. The browser now connects directly to the server https://www.techtonic.com/ to request any resource or service.
 
 
 ## From start to finish, how does data reach you to be rendered in the browser?
 
-put your answer here
+The browser (specifically the browser engine) is responsible for the process of presenting the data on the screen. In general terms the process is something like this:
+
+1. The browser converts the flow of received bytes (either from the network or from the local system) into nodes to build the render tree (DOM + CSSOM).
+2. Then a Layout process, take the render tree, to calculate the positions and sizes of each of the elements in the browser viewport.
+3. Once you have the exact layout of the computed elements, the browser draws each individual node on the screen.
+
+Note: with respect to JavaScript, during step 1, if a <script> node is found during the construction of the DOM, it stops, until the execution of the JavaScript is finished, then the DOM continues its construction. On the other hand, JavaScript execution always waits until the CSSOM is ready.
+
+The entire process, of the steps since the browser receives HTML, CCS and JS as bytes, and converts them into elements represented on the screen is known as THE CRITICAL RENDERING PATH.
 
 ## What code is rendered in the browser?
 
