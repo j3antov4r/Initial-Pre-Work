@@ -47,11 +47,13 @@ A runtime, in simple terms, is an environment in which a program runs. Runtime s
 
 ## How many instances of the client-side assets (HTML, CSS, JS, Images, etc.) are created?
 
-put your answer here
+If you refer to the server side (hosting), we can say that there is an instance of these assets. Now, as these client-side assets are sent to the client's browser, we can say that multiple instances are sent according to the requests, it is up to the browser and its cache system whether or not to store those instances on the client side.
 
 ## How many instances of the server-side code are available at any given time?
 
-put your answer here
+In general, it depends on the programming language used and the characteristics of the application server, as well as the architecture of the service we are designing. For example, in Java the application server can instantiate different instances of a service concurrently to respond to customer requests, and depending on the service life cycle it may be active or inactive at a given time. As for the source code, the server has the file of the service or program that is running.
+
+
 
 ## How many instances of the databases connected to the server application are created?
 
