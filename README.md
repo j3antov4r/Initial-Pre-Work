@@ -30,19 +30,20 @@ The entire process, of the steps since the browser receives HTML, CCS and JS as 
 
 ## What code is rendered in the browser?
 
-put your answer here
+Specifically, the data that is rendered in the browser comes from the nodes of the Render Tree.
+Which are a set of elements (texts, images, video, etc.) obtained from HTML tags, CSS styles, JavaScript, and resources (audio, video, image) from a remote server or from a local system. The browser during the execution of the Critical Rendering Path identifies the elements that it must represent on the screen.
 
 ## What is the server-side code’s main function?
 
-put your answer here
+In general terms, the main function is to provide access to the application's business logic services , connections to resources and databases, another business services such as messaging queue , etc. by abstracting the business logic of the presentation logic (usually on the side of the client). This code is executed on the server side (web server / enterprise server), typically written in languages such as Java, Ruby, Python, Go, among others.
 
 ## What is the client-side code’s main function?
 
-put your answer here
+The main function is to perform the presentation logic of a web application, as well as improve the appearance, behavior and user experience. The necessary validations and logic verifications are delegated here before sending a request to the remote server. It also handles the presentation of errors and messages suitable for the end user. This type of code is executed in the browser, and is typically written in HTML, CSS, JavaScript, React JS, etc.
 
 ## What is runtime?
 
-put your answer here
+A runtime, in simple terms, is an environment in which a program runs. Runtime systems are responsible for providing to the running programs with various services so they can run, these services can include: memory management, how the program should access the variables, access to system resources, mechanisms for passing parameters, etc
 
 ## How many instances of the client-side assets (HTML, CSS, JS, Images, etc.) are created?
 
@@ -54,4 +55,10 @@ put your answer here
 
 ## How many instances of the databases connected to the server application are created?
 
-put your answer here
+First, let's clarify the term Database Instance, which generally describes a complete database environment, including RDBMS, table structure, stored procedures, and other functionalities. Thus, for example, an administrator may create multiple instances of the same database for different purposes (production, QA or development for example).
+
+Then, being so, typically the application server will connect to a database instance to execute, for example, some SQL instructions. For this, the server will use a pool of connections that it can reuse and reassign to different requests.
+
+Now, it may be the case, according to the architecture of the service that we are designing, that we can have a Database Cluster, or a swarm, or a Cloud Database, in which we may have multiple instances of the BD.
+
+In any case, depending on the architecture where we are working, our server will usually go against an instance of the database regardless of the underlying implementation. But, if for example our system needs to connect to different instances of Databases, then the server will connect to the appropriate instance or appropriate instances depending on the requirement that it is processing.
